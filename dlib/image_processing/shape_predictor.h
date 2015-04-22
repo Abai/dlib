@@ -290,6 +290,14 @@ namespace dlib
         shape_predictor (
             const matrix<float,0,1>& initial_shape_,
             const std::vector<std::vector<impl::regression_tree> >& forests_,
+            const std::vector<std::vector<unsigned long> >& anchor_idx_,
+            const std::vector<std::vector<dlib::vector<float,2> > >& deltas_
+        ) : initial_shape(initial_shape_), forests(forests_), anchor_idx(anchor_idx_), deltas(deltas_)
+        {}
+
+        shape_predictor (
+            const matrix<float,0,1>& initial_shape_,
+            const std::vector<std::vector<impl::regression_tree> >& forests_,
             const std::vector<std::vector<dlib::vector<float,2> > >& pixel_coordinates
         ) : initial_shape(initial_shape_), forests(forests_)
         /*!
