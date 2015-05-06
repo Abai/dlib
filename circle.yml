@@ -1,5 +1,5 @@
 test:
   override:
-    - cmake dlib/ 
+    - cmake dlib/test/ 
     - cmake --build . --config Release
     - ./dtest --runall
