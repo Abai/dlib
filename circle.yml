@@ -1,0 +1,8 @@
+test:
+  override:
+    - cd dlib/test
+    - mkdir build
+    - cd build
+    - cmake ..
+    - cmake --build . --config Release
+    - ./dtest --runall
