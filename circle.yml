@@ -1,6 +1,6 @@
 test:
   override:
-    - cd dlib/test
+    - cd dlib/dlib/test
     - mkdir build
     - cd build
     - cmake ..
